@@ -18,9 +18,7 @@ namespace SeModDebugger.Thraxus.Mods
 {
 	public class AwwScrap : BaseLoggingClass
 	{
-		protected override string Id { get; } = nameof(AwwScrap);
-
-		public const string ChatHandle = nameof(AwwScrap);
+        public const string ChatHandle = nameof(AwwScrap);
 
 		private const string SpawnScrapBagCommand = "ssb";
 		private const string ScrapSuffix = "Scrap";
@@ -107,7 +105,7 @@ namespace SeModDebugger.Thraxus.Mods
 			MyTimerComponent component;
 			if (myInventoryBagEntity.Components.TryGet(out component))
 			{
-				component.ChangeTimerTick(5 * Common.Settings.TicksPerMinute);
+				component.ChangeTimerTick(5 * Common.References.TicksPerMinute);
 			}
 
 			myInventoryBagEntity.DisplayNameText = "Debug Goodie Bag!";

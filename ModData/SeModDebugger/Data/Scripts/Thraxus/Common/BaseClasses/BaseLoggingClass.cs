@@ -1,13 +1,11 @@
 ﻿using System;
-using SeModDebugger.Thraxus.Common.Enums;
 using SeModDebugger.Thraxus.Common.Interfaces;
-using VRage.Game;
 
 namespace SeModDebugger.Thraxus.Common.BaseClasses
 {
 	public abstract class BaseLoggingClass : ICommon
 	{
-		public event Action<string, string, LogType, bool, int, string> OnWriteToLog;
+		public event Action<string, string> OnWriteToLog;
 		public event Action<ICommon> OnClose;
 
 		public bool IsClosed { get; private set; }
@@ -21,11 +19,9 @@ namespace SeModDebugger.Thraxus.Common.BaseClasses
 
 		public virtual void Update(ulong tick) { }
 
-		protected abstract string Id { get; }
-
-		public void WriteToLog(string caller, string message, LogType type, bool showOnHud = false, int duration = Settings.DefaultLocalMessageDisplayTime, string color = MyFontEnum.Green)
+		public virtual void WriteGeneral(string caller, string message)
 		{
-			OnWriteToLog?.Invoke($"{Id}: {caller}", message, type, showOnHud, duration, color);
+			OnWriteToLog?.Invoke(caller, message);
 		}
 	}
 }

@@ -41,7 +41,7 @@ namespace SeModDebugger.Thraxus
 		private void SetupCommonClass(ICommon ic)
 		{
 			ic.OnClose += Close;
-			ic.OnWriteToLog += WriteToLog;
+			ic.OnWriteToLog += WriteGeneral;
 			_commonClasses.Add(ic);
 		}
 
@@ -57,7 +57,7 @@ namespace SeModDebugger.Thraxus
 		protected void Close(ICommon ic)
 		{
 			ic.OnClose -= Close;
-			ic.OnWriteToLog -= WriteToLog;
+			ic.OnWriteToLog -= WriteGeneral;
 			_commonClasses.Remove(ic);
 		}
 
