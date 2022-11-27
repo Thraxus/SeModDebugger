@@ -132,7 +132,15 @@
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Common\Reporting\ExistingFactions.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Common\Reporting\InstalledMods.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Common\Reporting\StoredItentities.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Enums\EventType.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Interfaces\IDeRegisterEvents.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Interfaces\IRegisterToEvents.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Interfaces\IRegisterEventsEarly.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Interfaces\IRegisterEventsLate.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Investigations\OnEntityAddMonitor.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Mods\AwwScrap.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Mods\Construct.cs" />
+    <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Mods\HostileTakeoverCore.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\SeModDebuggerCore.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Common\BaseClasses\BaseGameLogicComp.cs" />
     <Compile Include="ModData\SeModDebugger\Data\Scripts\Thraxus\Common\BaseClasses\BaseLoggingClass.cs" />

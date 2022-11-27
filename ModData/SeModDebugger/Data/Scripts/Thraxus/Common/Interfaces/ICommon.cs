@@ -9,9 +9,9 @@ namespace SeModDebugger.Thraxus.Common.Interfaces
 
 		void Update(ulong tick);
 
-		bool IsClosed { get; }
-
-		void Close();
+		bool IsRegistered { get; set; }
+		
+        void Close();
 
 		void WriteGeneral(string caller, string message);
 	}

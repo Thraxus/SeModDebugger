@@ -9,8 +9,9 @@ namespace SeModDebugger.Thraxus.Common.BaseClasses
 		public event Action<ICommon> OnClose;
 
 		public bool IsClosed { get; private set; }
+        public bool IsRegistered { get; set; }
 
-		public virtual void Close()
+        public virtual void Close()
 		{
 			if (IsClosed) return;
 			IsClosed = true;
